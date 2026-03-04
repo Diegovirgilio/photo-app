@@ -1,0 +1,41 @@
+/**
+ * FUNDAMENTO: Tailwind Directives
+ * 
+ * MOTIVO:
+ * - @tailwind base: Reset CSS + base styles
+ * - @tailwind components: Classes de componentes
+ * - @tailwind utilities: Classes utilitárias
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Custom animations */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
