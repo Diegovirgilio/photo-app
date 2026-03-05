@@ -13,6 +13,7 @@ import { useAuth } from '../contexts/AuthContext';
  */
 export const PhotoCard = ({ photo, onPhotoUpdate, onPhotoDelete, showDelete = false }) => {
   const { user } = useAuth();
+  const isOwner = user?.id === photo.user_id;
   const [isLiked, setIsLiked] = useState(false); // TODO: verificar se usuário já deu like
   const [likesCount, setLikesCount] = useState(photo.likes_count);
   const [isLiking, setIsLiking] = useState(false);

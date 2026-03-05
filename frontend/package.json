@@ -1,6 +1,7 @@
 {
   "name": "photo-app-frontend",
   "version": "1.0.0",
+  "type": "module",  
   "private": true,
   "description": "Frontend React para aplicativo de compartilhamento de fotos",
   "scripts": {
