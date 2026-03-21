@@ -44,8 +44,9 @@ MOTIVO:
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:5173",
         "http://localhost:3000",
+        "http://localhost:5173",
+        "https://*.vercel.app",
         "https://photo-app-production-b576.up.railway.app",
     ],
     allow_credentials=True,
