@@ -44,9 +44,9 @@ MOTIVO:
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:3000",  # Local development
-        "https://*.vercel.app",    # Vercel previews
-        "https://seu-app.vercel.app"  # Produção (você vai mudar depois)
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "https://photo-app-production-b576.up.railway.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
