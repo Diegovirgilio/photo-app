@@ -23,20 +23,16 @@ const AppRoutes = () => {
 
   return (
     <Routes>
-      {/* Public route: redirect to gallery if logged in */}
+      {/* Public route: redirect to upload if already logged in */}
       <Route
         path="/login"
-        element={user ? <Navigate to="/" replace /> : <LoginPage />}
+        element={user ? <Navigate to="/upload" replace /> : <LoginPage />}
       />
 
-      {/* Protected routes */}
+      {/* Public route: galeria acessível sem login */}
       <Route
         path="/"
-        element={
-          <PrivateRoute>
-            <GalleryPage />
-          </PrivateRoute>
-        }
+        element={<GalleryPage />}
       />
 
       <Route
